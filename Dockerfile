@@ -1,4 +1,6 @@
 FROM continuumio/miniconda3
+
+# Create conda env with jupyterhub
 RUN conda config --add channels conda-forge
 RUN conda config --set channel_priority strict
 RUN conda update --all
@@ -6,8 +8,11 @@ RUN conda create -n env anaconda jupyterhub pyspark oauthenticator
 RUN conda update -n base -c defaults conda
 RUN echo "source activate env" > ~/.bashrc
 ENV PATH /opt/conda/envs/env/bin:$PATH
+
+# Import jupyterhub users
 COPY jupyterhub_config.py /
 
-# docker build -t jupyterhub .
-# docker run -p 8000:8000 -it --mount source=home,target=/home jupyterhub
-# jupyterhub --ip 0.0.0.0 
+# Create script for container startup
+COPY docker-entrypoint.sh /opt/conda/envs/env/bin/
+RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
+ENTRYPOINT ["docker-entrypoint.sh"]
