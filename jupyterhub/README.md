@@ -36,9 +36,12 @@ Devido a constantes avanços da computação, especialmente da realizada em nuve
 
     make run
 
-## Como utilizar [usuário comum]
-0 - Envie para o adminstrador sua conta do GitHub para que ele adicione permissões para você.
-1 - Acesse o link/IP dado e proceda com o login usando sua conta do GitHub
+## Como utilizar [usuário comum]  
+
+0 - Envie para o adminstrador sua conta do GitHub para que ele adicione permissões para você.   
+  
+1 - Acesse o link/IP dado e proceda com o login usando sua conta do GitHub  
+  
 2 - Você verá uma tela semelhante a do Jupyter Notebook. É possível enviar arquivos, criar notebooks ou terminais (do Linux). Todos os arquivos da sua pasta são privados, e somente você ou o Root podem acessá-los, embora seus processos podem ser finalizados por qualquer administrador.
 
 ### Exemplo 1: Clonando repositório do Git (qualquer um)
