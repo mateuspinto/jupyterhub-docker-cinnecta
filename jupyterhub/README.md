@@ -1,6 +1,9 @@
 # [Docker] JupyterHub autenticado pelo Github
 Imagem de Docker completa do JupyterHub com todos os pacotes base Anaconda Python3 para codificação de múltiplos desenvolvedores em um cluster, com ambientes individuais de arquivos e uma pasta compartilhada entre todos, além da biblioteca PySpark, que permite a manipulação de dados com  o alto grau de paralelismo do Apache Sparky. Toda a autenticação é feita pelo próprio Github.
 
+![enter image description here](https://i.imgur.com/24DhsSk.png)
+
+
 ## Motivação
 Devido a constantes avanços da computação, especialmente da realizada em nuvem, e graças também a mudanças na forma que o mercado de trabalho se organiza, cada vez mais o processamento de dados em nuvem mostra-se como o caminho mais interessante a ser seguido, devido a ser 100% compatível com o homeworking e também por ser mais barato mesmo para trabalho em empresas físicas, que muitas vezes se veem amplamente mais dispostas a alugar um servidor como os da AWS ou Azure do que arcar com um próprio, e mesmo um próprio requer uma solução inteligente que use e abuse de paralelismo. Para isso, foi desenvolvido uma solução para a Cinnecta em parceria com o NESPeD (Núcleo de Estudos em Sistemas Pervasivos e Distribuídos), que permite que vários desenvolvedores trabalhem juntos tendo sua própria área de trabalho privada, podendo compartilhar arquivos entre si, seja de casa, utilizando qualquer sistema operacional ou até mesmo do celular, ou na empresa/universidade em si, e utilizando todo o processamento da máquina instalada.
 
@@ -36,13 +39,13 @@ Devido a constantes avanços da computação, especialmente da realizada em nuve
 
     make run
 
-## Como utilizar [usuário comum]  
-
-0 - Envie para o adminstrador sua conta do GitHub para que ele adicione permissões para você.   
+## Como utilizar [usuário comum]
+0 - Envie para o adminstrador sua conta do GitHub para que ele adicione permissões para você.  
   
-1 - Acesse o link/IP dado e proceda com o login usando sua conta do GitHub  
+1 - Acesse o link/IP dado e proceda com o login usando sua conta do GitHub.  
   
-2 - Você verá uma tela semelhante a do Jupyter Notebook. É possível enviar arquivos, criar notebooks ou terminais (do Linux). Todos os arquivos da sua pasta são privados, e somente você ou o Root podem acessá-los, embora seus processos podem ser finalizados por qualquer administrador.
+2 - Você verá uma tela semelhante a do Jupyter Notebook. É possível enviar arquivos, criar notebooks ou terminais (do Linux). Todos os arquivos da sua pasta são privados, e somente você ou o Root podem acessá-los, embora seus processos podem ser finalizados por qualquer administrador.  
+  
 
 ### Exemplo 1: Clonando repositório do Git (qualquer um)
 1 - Vá em New:
@@ -93,7 +96,7 @@ Devido a constantes avanços da computação, especialmente da realizada em nuve
 
 ![enter image description here](https://i.imgur.com/uzW8FFw.png)
 
-4 - Os arquivos dessa pasta são acessíveis por todos. Para adicionar, é possível usar o "wget" do Linux, "cp" para copiar arquivos da sua área de trabalho, "git clone" e afins.
+4 - Os arquivos dessa pasta são acessíveis por todos. Para adicionar, é possível usar o "wget" do Linux, "cp" para copiar arquivos da sua área de trabalho, "git clone" e afins.  
 
 ### Utilizando arquivos compartilhados
 
