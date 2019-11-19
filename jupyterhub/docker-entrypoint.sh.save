@@ -1,0 +1,5 @@
+#!/bin/bash
+adduser -q --gecos '""' --disabled-password aslan555
+for f in /home/*/; do chown ${f:6:-1} "$f"; done
+chmod -R 0777 /shared
+jupyterhub --ip 0.0.0.0
